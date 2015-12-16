@@ -28,7 +28,7 @@ A mark;
 A mtm;
 A mtv;
 A mtc;
-D nan;
+D nanx;
 A neg1;
 A one;
 A pie;

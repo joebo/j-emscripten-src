@@ -17,7 +17,7 @@
 
 static B numd(n,s,v)I n;C*s;D*v;{C c,*t;D x,y;
  ASSERT(n,EVILNUM);
- if('-'==*s&&3>n){x=1==n?inf:(c=*(1+s),c=='-')?-inf:c=='.'?nan:0; if(x){*v=x; R 1;}}
+ if('-'==*s&&3>n){x=1==n?inf:(c=*(1+s),c=='-')?-inf:c=='.'?nanx:0; if(x){*v=x; R 1;}}
  x=strtod(s,&t);
  if(t<s+n-1&&'r'==*t){y=strtod(1+t,&t); x=y?x/y:0<x?inf:0>x?-inf:0;}
  ASSERT(t>=s+n,EVILNUM);

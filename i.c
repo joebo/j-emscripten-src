@@ -74,7 +74,7 @@ C jinit2(argc,argv)int argc;C**argv;{A*v;B b=1,n=0;C p[256]="profile.js",*s;D*d;
  GA(mtm,BOOL,0,2,&zeroZ);
  qct=1.0; DO(44, qct *=0.5;); qfuzz=qct;
  MC(&inf,XINF,(size_t)sizeof(D)); GGA(ainf,FL,1,0); *(D*)AV(ainf)=inf;
- MC(&nan,XNAN,(size_t)sizeof(D));
+ MC(&nanx,XNAN,(size_t)sizeof(D));
  GA(qevm,BOX,1+NEVM,1,0); v=(A*)AV(qevm);
  RZ(initevm(v,EVBREAK  ,"break"            ));
  RZ(initevm(v,EVDEFN   ,"defn error"       ));

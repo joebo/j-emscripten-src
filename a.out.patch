@@ -1,0 +1,25 @@
+// cat a.out.patch >> a.out.js
+function ftCall_iiii(x, a0, a1, a2) {
+    if (debug_table_iiii[x] != 0) {
+	return FUNCTION_TABLE_iiii[x](a0, a1,a2);
+    } else if (debug_table_iii[x] != 0) {
+	return FUNCTION_TABLE_iii[x](a0, a1);
+    } 
+    return FUNCTION_TABLE_iiii[x](a0, a1, a2);
+}
+
+function ftCall_iiiii(x, a0, a1, a2, a3) {
+    if (debug_table_iiiii[x] != 0) {
+	return FUNCTION_TABLE_iiiii[x](a0, a1,a2, a3);
+    } else if (debug_table_iiii[x] != 0) {
+	return FUNCTION_TABLE_iiii[x](a0, a1, a2);
+    } 
+    return FUNCTION_TABLE_iiiii[x](a0, a1,a2, a3);
+}
+
+var _jtmonadO = _jtmonad;
+
+function _jtmonad($jt,$b,$e,$stack) {
+console.log(arguments);
+return _jtmonad($jt, $b, $e, $stack);
+}

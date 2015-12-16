@@ -14,11 +14,8 @@
 #include "j.h"
 #include "x.h"
 
-#if (SYS_GETTOD)
-#include <sys/time.h>
-#else
 #include <time.h>
-#endif
+
 
 #if (SYS & SYS_MACINTOSH)
 #include "mac.h"
@@ -89,6 +86,7 @@ F1(ts){A z;I*x;struct tm*t;time_t now;
  R z;
 }
 
+#include <sys/time.h>
 #if (SYS_GETTOD)
 D tod(){struct timeval t; gettimeofday(&t,NULL); R t.tv_sec+(D)t.tv_usec/1e6;}
 #else
@@ -111,7 +109,7 @@ F1(dl){
 #if (SYS & SYS_MACINTOSH)
  {I m=TickCount()+60*i0(w); while(m>TickCount()&&breaker());}
 #else
- DO(i0(w), sleep(1); RZ(breaker()););
+ //DO(i0(w), sleep(1); RZ(breaker()););
 #endif
  R w;
 }

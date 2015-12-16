@@ -188,7 +188,7 @@ extern A        mtc;
 extern A        mtv;
 extern A        mtm;
 extern void     mvc();
-extern D        nan;
+extern D        nanx;
 extern A        nand();
 extern I        nc();
 extern A        ne();

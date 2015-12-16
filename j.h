@@ -151,3 +151,8 @@
 #define EVWSFULL        21
 
 #define NEVM            21      /* number of event codes                   */
+
+#ifdef EMSCRIPTEN
+int isatty(int fd);
+int unlink(const char *pathname);
+#endif
