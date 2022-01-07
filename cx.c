@@ -17,9 +17,9 @@
 /*  g  character matrix of right argument to :                             */
 /*  h  4-element vector of boxes                                           */
 /*       0  vector of boxed tokens excluding labels for f                  */
-/*       1  2-column matrix of (label) link (line#) for f                  */
+/*       1  2-column matrix of (label) linkx (line#) for f                  */
 /*       2  vector of boxed tokens excluding labels for g                  */
-/*       3  2-column matrix of (label) link (line#) for g                  */
+/*       3  2-column matrix of (label) linkx (line#) for g                  */
 
 #include "j.h"
 #include "a.h"
@@ -92,7 +92,7 @@ static F1(preparse){A lab,s,*sv,t,*tv,y,*yv;I i,j=0,n;
   if(7<=AN(s)&&NAME&AT(lab)&&RPAR&AT(sv[2])){
    yv[j++]=lab; RZ(yv[j++]=sc(i)); sv[2]=mark; RZ(tv[i]=drop(two,s));
  }}
- R link(t,box(reshape(v2(j/2,2L),y)));
+ R linkx(t,box(reshape(v2(j/2,2L),y)));
 }
 
 F2(colon){A d,h,ha,hw,m,l;B b,c;I an,at,wn,wt;C*p,*q,*r,*x,*z;

@@ -30,7 +30,7 @@ P ps[]={
 /*  46 2e .  CDOT     */ {CONJ, 0,         dot,      0,    0,    0,    0      },
 /*  47 2f /  CSLASH   */ {ADV,  slash,     0,        0,    0,    0,    0      },
 /*  58 3a :  CCOLON   */ {CONJ, 0,         colon,    0,    0,    0,    0      },
-/*  59 3b ;  CSEMICO  */ {VERB, raze,      link,     RMAX, RMAX, RMAX, 0      },
+/*  59 3b ;  CSEMICO  */ {VERB, raze,      linkx,     RMAX, RMAX, RMAX, 0      },
 /*  60 3c <  CLT      */ {VERB, box,       lt,       RMAX, 0,    0,    COPE   },
 /*  61 3d =  CEQ      */ {VERB, sclass,    eq,       RMAX, 0,    0,    0      },
 /*  62 3e >  CGT      */ {VERB, ope,       gt,       0,    0,    0,    CBOX   },

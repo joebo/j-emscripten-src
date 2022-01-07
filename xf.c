@@ -47,21 +47,21 @@ F1(host){A t,z;B b;C*fname,*s;FILE*f;I n;
  F1RANK(1,host,0);
  ASSERT(CHAR&AT(w),EVDOMAIN);
  n=AN(w);
- GA(t,CHAR,n+5+L_tmpnam,1,0); s=(C*)AV(t);
+ //GA(t,CHAR,n+5+L_tmpnam,1,0); s=(C*)AV(t);
  fname=5+n+s; MC(s,AV(w),n);
 #if (SYS & SYS_ARCHIMEDES)
  MC(n+s," { > ",5L); strcpy(fname,"<J$Dir>.Temp"); strcat(s," }");
  unlink(fname);
- b=sesm?!os_swi1(Wimp_StartTask,(I)s):!system(s);
+ //b=sesm?!os_swi1(Wimp_StartTask,(I)s):!system(s);
 #endif
 #if (SYS & SYS_ATARIST)
- MC(n+s,"   > ",5L); MC(fname,"jxxhost",8L); b=!system(s);
+ //MC(n+s,"   > ",5L); MC(fname,"jxxhost",8L); b=!system(s);
 #endif
 #if (SYS & SYS_PCWIN)
  ASSERT(0,EVDOMAIN);
 #endif
 #if !(SYS & SYS_ARCHIMEDES+SYS_ATARIST+SYS_PCWIN)
- MC(n+s,"   > ",5L); tmpnam(fname);          b=!system(s);
+ //MC(n+s,"   > ",5L); tmpnam(fname);          b=!system(s);
 #endif
  if(b){f=fopen(fname,FREAD); z=rd(f,-1L,fsize(f)); fclose(f);}
  unlink(fname);
@@ -74,13 +74,13 @@ F1(hostne){C*s;
  ASSERT(CHAR&AT(w),EVDOMAIN);
  s=(C*)AV(w);
 #if (SYS & SYS_ARCHIMEDES)
- ASSERT(sesm?!os_swi1(Wimp_StartTask,(I)s):!system(s),EVFACE);
+ //ASSERT(sesm?!os_swi1(Wimp_StartTask,(I)s):!system(s),EVFACE);
 #endif
 #if (SYS & SYS_PCWIN)
  ASSERT(32<=WinExec(s,0L),EVFACE);
 #endif
 #if !(SYS & SYS_ARCHIMEDES+SYS_PCWIN)
- ASSERT(!system(s),EVFACE);
+ //ASSERT(!system(s),EVFACE);
 #endif
  R mtv;
 }

@@ -166,7 +166,7 @@ extern A        left1();
 extern A        left2();
 extern A        less();
 extern A        lev();
-extern A        link();
+extern A        linkx();
 extern A        local;
 extern A        logar1();
 extern A        logar2();

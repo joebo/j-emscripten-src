@@ -89,7 +89,7 @@ TACT(vpunc){R stack[e-1];}
 TACT(vis){A n=stack[b].a,v=stack[e].a;C p=local&&*AV(stack[1+b].a);
  tfail=!(NAME&AT(n));
  symbis(n,v,p?local:global);
- tname=link(n,tname); tval=link(stack[e].t,tval);
+ tname=linkx(n,tname); tval=linkx(stack[e].t,tval);
  R stack[e];
 }
 
@@ -137,8 +137,8 @@ F1(vtrans){PROLOG;A loc=local,z;
  ASSERT(CHAR&AT(w),EVDOMAIN);
  ASSERT(1>=AR(w),EVRANK);
  tvalen=1+all1(eps(box(cstr("x.")),words(w)));
- RZ(tname=link(ds(CALPHA),ds(COMEGA)));
- RZ(tval =link(ds(CLEFT ),ds(CRIGHT)));
+ RZ(tname=linkx(ds(CALPHA),ds(COMEGA)));
+ RZ(tval =linkx(ds(CLEFT ),ds(CRIGHT)));
  GA(local,SYMB,twprimes[0],1,0);
  symbis(scnm(CALPHA),one,local);
  symbis(scnm(COMEGA),one,local);

@@ -35,7 +35,7 @@ static F1(rc){A bot,p,*v,x,y;B b;C*bv,c,ul,ll,*pv;I j,k,m,n,*s,xn,*xv,yn,*yv;
     bv[k]=*(pv+AN(p)-m);
    }else bv[k]=' ';
   }
- R link(x,y);
+ R linkx(x,y);
 }
 
 static I pad(a,w,zv)A a,w;C*zv;{C*u,*v,*wv;I c,d,r,*s;
@@ -93,7 +93,7 @@ static F2(troot){A t,x;B b;C*u,*v;I j,k,m,n,*s;
  t=*(A*)AV(w); s=AS(t); m=*s; n=*(1+s);
  u=(C*)AV(t);         DO(m, if(' '!=*u){j=i; break;} u+=n;);
  u=(C*)AV(t)+(m-1)*n; DO(m, if(' '!=*u){k=i; break;} u-=n;);
- R link(center(x,j,k,m),w);
+ R linkx(center(x,j,k,m),w);
 }
 
 static F1(tleaf){A t,*x,z;C d[2],*v;I n,*s;

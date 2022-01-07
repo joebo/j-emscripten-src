@@ -134,7 +134,7 @@ I*deba(stack,i)A*stack;I i;{DC d; I k,*sp,*spx;
  GA(d,INT,2*i+DSZ,1L,0);
  d->t=DCPARS;
  d->lnk=sitop;
- sitop=d;    /* link new debug token array to top of si stack */
+ sitop=d;    /* linkx new debug token array to top of si stack */
  d->ln=i;    /* tokens in debug token array                   */
  d->n=i-1;   /* assumed error at end of token array           */
  sp=DSZX+(I*)d;
@@ -148,7 +148,7 @@ I*deba(stack,i)A*stack;I i;{DC d; I k,*sp,*spx;
 DC debadd(type)I type;{DC d;
  GA(d,INT,DSZ,1,0);
  d->t=type;
- d->lnk=sitop; sitop=d; /* link new debug stack entry to top of si */
+ d->lnk=sitop; sitop=d; /* linkx new debug stack entry to top of si */
  R d;
 }
 

@@ -275,7 +275,7 @@ F1(evms){A t,*y;
  ASSERT(NEVM==AN(w),EVLENGTH);
  ASSERT(BOX&AT(w),EVDOMAIN);
  y=(A*)AV(w); DO(NEVM, RZ(vs(*y++)););
- RZ(t=link(mtv,w)); ra(t); fa(qevm); qevm=t;
+ RZ(t=linkx(mtv,w)); ra(t); fa(qevm); qevm=t;
  R mtv;
 }
 

@@ -116,7 +116,7 @@ A gconj(a,w,id)A a,w;C id;{A hs,y;B na;I n;
  ASSERT(1>=AR(y),EVRANK);
  ASSERT(2==n||3==n,EVLENGTH);
  ASSERT(BOX&AT(y),EVDOMAIN);
- RZ(hs=every(3==n?y:link(scc(CLEFT),y),fx));
+ RZ(hs=every(3==n?y:linkx(scc(CLEFT),y),fx));
  R fdef(id,VERB, na?gcl1:gcr1,na?gcl2:gcr2, a,w,hs, na?VGERL:VGERR, RMAXL,RMAXL,RMAXL);
 }
 

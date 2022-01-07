@@ -83,7 +83,7 @@ F1(raze){A*v,y,z;B b=0;C*x;I c=0,k,m=0,n,p,r=1,*s,t;
  R z;
 }
 
-F2(link){RZ(a&&w); R over(box(a),AN(w)&&AT(w)&BOX+BOXK?w:box(w));}
+F2(linkx){RZ(a&&w); R over(box(a),AN(w)&&AT(w)&BOX+BOXK?w:box(w));}
 
 
 static A numx(id)C id;{

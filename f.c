@@ -85,7 +85,7 @@ static F1(rc){A*v,x,y;I j,k,n,r,*s,xn,*xv,yn,*yv;
  RZ(y=apv(yn,0L,0L)); yv=AV(y);
  DO(n, s=AS(*v++); j=i/yn%xn; k=i%yn; xv[j]=MAX(xv[j],*s); yv[k]=MAX(yv[k],*(1+s)););
  DO(xn,xv[i]++;); DO(yn,yv[i]++;);
- R link(x,y);
+ R linkx(x,y);
 }
 
 static void encell(zv,wd,w)C*zv;I wd;A w;{C*p,*q;I c,*s;
